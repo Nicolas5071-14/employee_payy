@@ -31,8 +31,9 @@ Pour configuration de chaque JDBC:
 
 Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne:
 
-
-try {
+private Connection connect() {
+		
+		try {
 			if(conn == null || conn.isClosed()) {
 				try {
 					conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/employee", "postgres", "nico");
@@ -43,6 +44,9 @@ try {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
+		return conn;
+	}
 
 
 Par ceci selon votre jdbc:
