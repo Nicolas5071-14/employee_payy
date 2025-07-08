@@ -31,11 +31,11 @@ Pour configuration de chaque JDBC:
 
 Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne:
 
- {		
+private Connection connect() { 		
 		try {
 			if(conn == null || conn.isClosed()) {
 				try {
-			cette ligne 👉		conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/employee", "postgres", "nico");
+cette ligne 👉👉👉👉	conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/employee", "postgres", "nico");
 				} catch (SQLException e) {
 					System.err.println(e.getMessage());
 				}
