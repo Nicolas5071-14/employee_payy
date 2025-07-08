@@ -29,10 +29,9 @@ Pour configuration de chaque JDBC:
 
 🔧 Tu peux aussi utiliser une autre base de données, mais dans ce cas, il faudra modifier cette ligne :
 
-Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne par ceci:
+Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne:
 
-private Connection connect() {
-		
+ {		
 		try {
 			if(conn == null || conn.isClosed()) {
 				try {
@@ -48,7 +47,7 @@ private Connection connect() {
 		return conn;
 	}
 
-
+Par ceci selon votre jdbc:
 DriverManager.getConnection("jdbc:database://host:port/database-name", "user-name", "password");
 
 Exemple pour PostgreSQL :
