@@ -31,9 +31,28 @@ Pour configuration de chaque JDBC:
 
 Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne par ceci:
 
+private Connection connect() {
+		
+		try {
+			if(conn == null || conn.isClosed()) {
+				try {
+			cette ligne 👉		conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/employee", "postgres", "nico");
+				} catch (SQLException e) {
+					System.err.println(e.getMessage());
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return conn;
+	}
+
+
 DriverManager.getConnection("jdbc:database://host:port/database-name", "user-name", "password");
 
 Exemple pour PostgreSQL :
 DriverManager.getConnection("jdbc:postgresql://localhost:5432/db", "postgres", "password")
 
+importer le employee.sql dans votre SGBD..
 
