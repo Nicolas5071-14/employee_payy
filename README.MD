@@ -29,7 +29,7 @@ Pour configuration de chaque JDBC:
 
 🔧 Tu peux aussi utiliser une autre base de données, mais dans ce cas, il faudra modifier cette ligne :
 
-Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne:
+Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne (conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/employee", "postgres", "nico");):
 
 private Connection connect() {
 		
