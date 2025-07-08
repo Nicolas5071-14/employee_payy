@@ -20,11 +20,16 @@ Un programme de gestion qui contient les informations des employés et des emplo
 🧰 Prérequis
 Ce programme utilise PostgreSQL comme base de données.
 
+
 📦 Tu peux télécharger le fichier .jar nécessaire pour la connexion Java/PostgreSQL ici :
-👉 https://jdbc.postgresql.org/download.html
+👉 https://jdbc.postgresql.org/download/
+
+Pour configuration de chaque JDBC:
+👉 https://gayerie.dev/epsi-b3-orm/javaee_orm/jdbc.html
 
 🔧 Tu peux aussi utiliser une autre base de données, mais dans ce cas, il faudra modifier cette ligne :
 
+Allez dans le dossier src/com/cbdzan/dao/BD.java et modifier la ligne par ceci:
 
 DriverManager.getConnection("jdbc:database://host:port/database-name", "user-name", "password");
 
